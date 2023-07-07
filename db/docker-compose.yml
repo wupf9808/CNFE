@@ -1,0 +1,16 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  db:
+    image: mariadb:10.7.6-focal
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: tVKnm2sZRZ8FYB5CHM3p
+      MARIADB_DATABASE: cnfe
+      MARIADB_USER: cnfe-user
+      MARIADB_PASSWORD: k3sM0ij1M0cXJ7TKLf3R
+    ports:
+      - 3306:3306
+    volumes:
+      - ./build:/usr/lib/mysql/plugin
